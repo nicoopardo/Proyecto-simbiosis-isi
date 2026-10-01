@@ -260,11 +260,23 @@ sin una fuente confirmada.
 | DP-03 | Precisar formatos regionales y condiciones verificables de localización. | Acta de A03, §7.2 | Pendiente |
 
 ## 9. Glosario
+Este apartado contiene las definiciones vigentes de los términos del dominio que pueden interpretarse de más de una manera. Cada entrada indicará su fuente para conservar la procedencia de la definición. El catálogo de requisitos podrá enlazar a los términos de esta sección, pero no los definirá de nuevo.
 
-Este apartado contiene las definiciones vigentes de los términos del dominio
-que pueden interpretarse de más de una manera. Cada entrada indicará su fuente
-para conservar la procedencia de la definición. El catálogo de requisitos podrá
-enlazar a los términos de esta sección, pero no los definirá de nuevo.
+| Término | Definición en Proyecto Simbiosis | Fuente |
+| --- | --- | --- |
+| **Nutricionista** | Rol común que agrupa a profesionales de la medicina y de la nutrición acreditados en la plataforma, con permisos para publicar recetas validadas, validar recetas de usuarios y redactar publicaciones de salud. | Acta Sec. 1.3 |
+| **Nutricionista acreditado** | Profesional del ámbito de la salud que ha aportado la documentación requerida en línea y ha sido aprobado por la plataforma, lo que le otorga distinción visual (icono de estrella) e intervención como experto. | Acta Sec. 1.3 |
+| **Paciente** | Usuario registrado que padece enfermedad inflamatoria intestinal y hace uso de las funcionalidades de la plataforma para buscar recetas, participar en el foro y autorizar a cuidadores. | Acta Sec. 1.1, 1.2, 2 |
+| **Cuidador** | Usuario registrado asociado a uno o varios pacientes (con su autorización expresa) para gestionar o consultar información de salud autorizada y apoyar en el uso de la plataforma. | Acta Sec. 1.2, 2 |
+| **Coordinador** | Rol administrativo y de moderación de la plataforma, encargado de gestionar los contenidos, supervisar el foro y tramitar las denuncias o reportes de contenido inapropiado. | Acta Sec. 4 |
+| **Receta propuesta** | Receta creada y enviada por un paciente o cuidador que permanece pendiente de revisión y validación por un nutricionista antes de publicarse como validada. | Acta Sec. 3 |
+| **Receta adaptada** | Filtro o búsqueda de recetas ajustado al perfil, alergias y restricciones alimentarias declaradas por el paciente, sin que el sistema modifique automáticamente sus ingredientes o cantidades. | Acta Sec. 3 |
+| **Receta validada** | Receta publicada directamente por un nutricionista o propuesta por un usuario y aprobada posteriormente por un nutricionista tras verificar su adecuación. | Acta Sec. 3 |
+| **Foro** | Espacio común y público de la plataforma diferenciado de los comentarios de recetas, destinado a compartir dudas y experiencias entre pacientes, cuidadores y nutricionistas. | Acta Sec. 4 |
+| **Publicación de salud** | Artículo breve sobre alimentación y hábitos de vida saludables redactado por un nutricionista, destinado a lectura y comentario sin evaluación numérica. | Acta Sec. 5 |
+| **Información de salud** | Datos opcionales aportados por el paciente (como restricciones o alergias) utilizados exclusivamente para adaptar la búsqueda de recetas. | Acta Sec. 2, 7.1 |
+| **Reporte / Denuncia** | Mecanismo mediante el cual cualquier usuario notifica al coordinador la existencia de un contenido o perfil potencialmente inapropiado. | Acta Sec. 4 |
+| **Cuenta inactiva (Cuidador)** | Estado al que pasa la cuenta de un cuidador tras tres meses consecutivos sin tener asignado a ningún paciente activo. | Acta Sec. 2 |
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
 | --- | --- | --- |
