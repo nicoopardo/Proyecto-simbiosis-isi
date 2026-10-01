@@ -280,6 +280,11 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | :--- | :--- | :--- | :---: | :---: | :--- | :---: |
 | **NFR-001** | NFR-Q (Disponibilidad) | La plataforma alcanzará una disponibilidad mínima del 99,5% en cada mes natural. | G | - | Medida mediante comprobaciones externas cada 5 minutos. | - |
 | **NFR-02** | NFR-I (Interfaz de software) | El sistema debe exigir autenticación mediante cuenta de Google para el acceso de los usuarios. | G | - | Prueba de inicio de sesión con credenciales válidas e inválidas de Google. | - |
+| **NFR-03** | NFR-R (Tecnología y entorno) | El sistema debe desarrollarse y desplegarse como una plataforma web. | G | - | Inspección de la arquitectura y el despliegue del sistema. | - |
+| **NFR-04** | NFR-Q (Usabilidad; Portabilidad) | La interfaz debe adaptarse correctamente a dispositivos móviles y navegadores de escritorio (Responsive Design). | L | - | Prueba de visualización en distintos tamaños de pantalla (móvil, tablet, PC). | - |
+| **NFR-05** | NFR-Q (Seguridad; Regulaciones y estándares) | El sistema debe garantizar la protección de datos personales cumpliendo con la normativa vigente sobre el consentimiento y conservación de información. | G | - | Auditoría legal y revisión de las políticas de privacidad implementadas. | - |
+| **NFR-07** | NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) | La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización. | G | - | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+
 
 
 Categorías y atributos: 
