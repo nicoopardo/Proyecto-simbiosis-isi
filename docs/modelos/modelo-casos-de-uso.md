@@ -45,10 +45,6 @@ El coordinador representa un rol externo del sistema y no corresponde a una pers
 | UC-05 | Actualizar perfil | Actualizar los datos personales y preferencias permitidos | Actor principal: Usuario registrado |
 | UC-06 | Eliminar cuenta propia | Solicitar la eliminación de la cuenta propia tras comprobar la identidad | Actor principal: Usuario registrado |
 | UC-07 | Gestionar cuentas | Consultar y gestionar las cuentas según las funciones de administración previstas | Actor principal: Coordinador |
-| UC-08 | Aprobar perfil profesional | Aprobar una solicitud de perfil profesional después de revisar la documentación requerida | Actor principal: Coordinador |
-| UC-09 | Gestionar relación de cuidado | Gestionar la activación de una relación de cuidado conforme a la autorización del paciente | Actor principal: Usuario registrado |
-| UC-10 | Consultar ayuda | Consultar instrucciones y contenidos de ayuda relacionados con las funciones disponibles | Actor principal: Usuario |
-| UC-11 | Realizar bienvenida | Mostrar el recorrido de bienvenida durante el primer acceso | Actor principal: Usuario registrado |
 
 Los casos de uso representan objetivos funcionales y no corresponden necesariamente uno a uno con los FR del catálogo.
 
@@ -81,12 +77,6 @@ La relación entre verificación del correo, aprobación profesional y autorizac
 | UC-05 Actualizar perfil | UR-03; FR-019 | NFR-010, NFR-003, NFR-014 | FR-019 permite modificar datos personales y preferencias, pero excluye alias y correo. La función debe respetar las condiciones de accesibilidad e idioma. |
 | UC-06 Eliminar cuenta propia | UR-03; FR-020, FR-211 | NFR-010 | La eliminación propia exige comprobar la identidad mediante la contraseña actual. El contenido publicado por un cuidador se conserva cuando corresponde. La función forma parte de los requisitos de E1, pero no del prototipo. |
 | UC-07 Gestionar cuentas | UR-13; FR-181, FR-182, FR-183, FR-184, FR-185, FR-211, FR-212 | NFR-010 | Representa el listado y las acciones de gestión de cuentas previstas para el coordinador, incluida la auditoría. La eliminación de una cuenta de cuidador debe conservar su contenido según los requisitos. |
-| UC-08 Aprobar perfil profesional | UR-01, UR-13; FR-014, FR-191, FR-213 | NFR-010 | La solicitud de perfil de nutricionista incluye documentación profesional en PDF y sus comprobaciones. Las funciones profesionales permanecen limitadas mientras la documentación no sea aprobada. |
-| UC-09 Gestionar relación de cuidado | UR-01; FR-193, FR-194 | NFR-010 | La relación de cuidado requiere autorización expresa del paciente. La autorización no se considera equivalente a la verificación del correo ni a la aprobación de un perfil profesional. |
-| UC-10 Consultar ayuda | UR-12; FR-172, FR-173 (parte correspondiente a E1), FR-174, FR-175, FR-176, FR-177 | NFR-010, NFR-003, NFR-014 | Representa la ayuda sobre las funciones seleccionadas, con navegación entre temas, elementos visuales y posibilidad de pausar, reanudar y cerrar. |
-| UC-11 Realizar bienvenida | UR-12; FR-207 | NFR-010, NFR-003, NFR-014 | Representa el recorrido de bienvenida del primer acceso. Puede omitirse y es independiente de la ayuda contextual. |
-
-Los NFR se incorporan como condiciones del modelo cuando afectan al comportamiento o a las características de las funciones. No se crea un caso de uso independiente para cada NFR.
 
 NFR-004 define la carga de referencia de 100 usuarios concurrentes y 10 operaciones por segundo durante 30 minutos. NFR-005 establece un máximo de 2 segundos para el 95 % de los inicios de sesión y de las consultas definidas para la prueba. En E1 la comprobación se limita al inicio de sesión.
 
