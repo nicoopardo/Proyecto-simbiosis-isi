@@ -2,144 +2,113 @@
 
 | Versión | Fecha | Estado |
 | --- | --- | --- |
-| 1.3 | 05/10/2026 | Plantilla |
+| 1.3 | 05/10/2026 | Borrador |
 
-**Iteración de referencia:** [Indica la última iteración incorporada al modelo.]
+**Iteración de referencia:** E1
 
 Este documento recoge el modelo de casos de uso del proyecto. Se completa a medida que se incorporan funciones. Los diagramas muestran distintas vistas del mismo modelo.
 
-Sustituye las indicaciones entre corchetes por tu contenido. Añade filas cuando las necesites. Si un apartado aún no se ha trabajado, indica que está pendiente. No inventes respuestas para completar la plantilla.
-
-**Trabajo en E1.** El producto principal es el diagrama de la primera vista. Usa las funciones del apartado 4 del [plan de E1](../planificacion/plan-iteracion-e1.md). La anotación de alcance puede ser breve. Los apartados siguientes permiten organizar el modelo y continuarlo después. No se requieren descripciones detalladas de los casos en E1 ni se establece una entrega adicional.
-
-**Evolución del documento.** Mantén este archivo al avanzar de iteración. Conserva los identificadores de los elementos que sigan siendo los mismos. Actualiza los datos iniciales cuando registres una nueva versión del modelo. Cambia el estado de «Plantilla» a «Borrador» al empezar a completarlo. Usa «Revisado» solo después de la revisión correspondiente. Git conservará los estados registrados en commits.
-
 ## 1 Alcance del modelo
 
-Explica qué funcionalidad representa el modelo en su estado actual. Indica qué funciones quedan pendientes. En E1, remite al plan para situar el alcance. No copies el catálogo completo.
+En E1 el modelo representa la primera vista funcional de Proyecto Simbiosis, centrada en el acceso local, la gestión básica de cuentas y la ayuda y bienvenida. El alcance se corresponde con las funciones seleccionadas en el apartado 4 del [plan de E1](../planificacion/plan-iteracion-e1.md).
 
-[Explica el alcance actual y sus límites.]
+La vista incluye el registro local, la verificación del correo, el inicio de sesión, la recuperación o restablecimiento de contraseña como función de requisitos, la actualización del perfil, la eliminación de la cuenta propia, la gestión básica de cuentas por parte del coordinador, la aprobación de perfiles profesionales, la gestión de las condiciones de acceso y la autorización de relaciones de cuidado. También representa la ayuda contextual y el recorrido de bienvenida.
 
-En iteraciones posteriores, actualiza el alcance acumulado. Distingue las funciones nuevas de las que ya estaban representadas. Una vista puede cubrir solo una parte de un UR o de un módulo.
+El modelo distingue la verificación del correo de la aprobación de un perfil profesional y de la autorización de una relación de cuidado. Estas condiciones no se consideran equivalentes.
+
+En E1 el modelo es parcial. Quedan pendientes la autenticación y vinculación con Google, la aplicación del alias en espacios públicos, la ayuda específica de recetas, foro, valoraciones y comentarios, las funciones avanzadas de ayuda, las acciones de moderación por infracciones, el ciclo de finalización de relaciones de cuidado y otras funciones de salud, recetas, foro, publicaciones y moderación.
+
+La primera vista no implica que todas las funciones representadas estén implementadas en el prototipo. El prototipo de E1 cubre únicamente los escenarios técnicos definidos en el plan de iteración.
 
 ## 2 Actores
 
-Registra los roles externos que participan en las funciones representadas. Un actor puede ser una persona o un sistema externo. Describe cada rol con una frase breve. No confundas estos roles con las personas del equipo de desarrollo.
-
 | Nombre del actor | Rol que representa |
 | --- | --- |
-| [Nombre] | [Describe el rol externo.] |
+| Usuario | Persona que interactúa con Proyecto Simbiosis |
+| Usuario registrado | Persona que dispone de una cuenta en la plataforma |
+| Coordinador | Persona que gestiona cuentas y aprobaciones desde las funciones de administración |
+| Servicio de correo | Sistema externo que permite enviar mensajes de verificación y restablecimiento |
 
-Mantén los mismos nombres en las tablas, los diagramas y las descripciones.
+Usuario registrado es una especialización de Usuario. Disponer de una cuenta no significa haber iniciado sesión.
 
-[Si existen generalizaciones, identifica el actor general y los actores especializados. Explica qué relación existe entre ellos. Puedes hacer referencia a un diagrama adicional de actores si facilita la lectura. Si no utilizas generalizaciones, indícalo.]
+El coordinador representa un rol externo del sistema y no corresponde a una persona concreta del equipo de desarrollo.
+
+El servicio de correo es un sistema externo utilizado para las comunicaciones asociadas al acceso y a la gestión de cuentas.
 
 ## 3 Casos de uso
 
-Registra los casos que aparecen en el modelo. Asigna a cada caso un identificador estable. Escribe el nombre con un verbo y un objeto. Resume el objetivo sin describir todos sus pasos.
-
 | Identificador | Nombre | Objetivo | Participantes |
 | --- | --- | --- | --- |
-| [UC-…] | [Nombre] | [Explica el objetivo.] | [Indica los actores que participan.] |
+| UC-01 | Registrar cuenta | Crear una cuenta local proporcionando los datos requeridos y aceptando las condiciones correspondientes | Actor principal: Usuario. Actor de apoyo: Servicio de correo |
+| UC-02 | Verificar correo | Confirmar la dirección de correo de una cuenta mediante el enlace recibido | Actor principal: Usuario |
+| UC-03 | Iniciar sesión | Acceder a la plataforma mediante las credenciales de una cuenta local | Actor principal: Usuario registrado |
+| UC-04 | Restablecer contraseña | Recuperar el acceso mediante un enlace enviado al correo de la cuenta | Actor principal: Usuario registrado. Actor de apoyo: Servicio de correo |
+| UC-05 | Actualizar perfil | Actualizar los datos personales y preferencias permitidos | Actor principal: Usuario registrado |
+| UC-06 | Eliminar cuenta propia | Solicitar la eliminación de la cuenta propia tras comprobar la identidad | Actor principal: Usuario registrado |
+| UC-07 | Gestionar cuentas | Consultar y gestionar las cuentas según las funciones de administración previstas | Actor principal: Coordinador |
+| UC-08 | Aprobar perfil profesional | Aprobar una solicitud de perfil profesional después de revisar la documentación requerida | Actor principal: Coordinador |
+| UC-09 | Gestionar relación de cuidado | Gestionar la activación de una relación de cuidado conforme a la autorización del paciente | Actor principal: Usuario registrado |
+| UC-10 | Consultar ayuda | Consultar instrucciones y contenidos de ayuda relacionados con las funciones disponibles | Actor principal: Usuario |
+| UC-11 | Realizar bienvenida | Mostrar el recorrido de bienvenida durante el primer acceso | Actor principal: Usuario registrado |
 
-[Indica los actores que participan. Si procede, distingue el actor principal, que busca alcanzar el objetivo del caso de uso y normalmente inicia la interacción, de los actores de apoyo, que proporcionan servicios o información al sistema.]
+Los casos de uso representan objetivos funcionales y no corresponden necesariamente uno a uno con los FR del catálogo.
 
-Esta distinción se establece para cada caso de uso. Un mismo actor puede desempeñar funciones diferentes en distintos casos. No es necesario asignar un actor principal independiente a cada caso incluido.
+La gestión de cuentas incluye las acciones de listado, aprobación, suspensión, eliminación y registro de auditoría previstas en E1. Las diferencias entre estas acciones se desarrollarán en las descripciones de los casos de uso cuando se trabajen con mayor profundidad.
 
-Al ampliar el modelo, conserva los casos anteriores que sigan siendo válidos. Si revisas un caso, conserva su identificador cuando siga representando el mismo objetivo. No reutilices el identificador de un caso retirado para un caso diferente.
+La autorización de una relación de cuidado se mantiene diferenciada de la verificación del correo y de la aprobación de un perfil profesional.
 
 ## 4 Diagramas del modelo
 
-Añade la primera vista en E1. En iteraciones posteriores, incorpora las vistas necesarias y revisa las anteriores cuando cambien elementos compartidos.
-
-Para cada vista, incluye un título, una frase sobre su alcance y el diagrama. Todas las vistas deben usar la misma frontera del sistema y nombres compatibles.
-
 ### 4.1 Primera vista
 
-**Título:** [Indica el título de la vista.]
+**Título:** Acceso, cuentas y ayuda
 
-**Alcance:** [Explica qué funciones representa esta vista.]
+**Alcance:** Representa los casos de uso seleccionados para E1 relacionados con el registro y acceso local, la gestión básica de cuentas, los perfiles y relaciones de cuidado, y la ayuda y bienvenida.
 
-[Inserta aquí el diagrama.]
-
-Si una decisión necesita aclaración, puedes añadir una nota breve junto al diagrama.
-
-**Nombre y ubicación de la imagen.** Guarda las imágenes en `docs/modelos/imagenes/`. Usa este patrón:
-
-```text
-tipo-de-diagrama-ambito.png
-```
-
-El tipo indica qué diagrama contiene la imagen. El ámbito indica qué funciones o elementos representa. Usa minúsculas, sin tildes, eñes ni espacios, y separa las palabras con guiones.
-
-Para la primera vista de E1, utiliza este nombre común:
-
-```text
-casos-de-uso-acceso-cuentas-ayuda.png
-```
-
-Inserta la imagen con este enlace relativo:
-
-```markdown
 ![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-acceso-cuentas-ayuda.png)
-```
 
-Al revisar esta vista, conserva el nombre del archivo y actualiza la imagen. No añadas la iteración, la versión, la fecha ni tu nombre al archivo. Git conservará las versiones registradas en commits.
+La vista utiliza la misma frontera del sistema para todos los casos representados. La autenticación mediante Google y las funciones todavía aplazadas no forman parte de esta vista.
 
-Si añades una vista diferente, utiliza otro ámbito. Si necesitas varias imágenes del mismo ámbito, añade un detalle que las distinga. La [guía de modelos](README.md) recoge los ejemplos y la convención que se ampliará para otros tipos de diagramas.
-
-Conserva también el archivo editable de la herramienta cuando esté disponible. Usa el mismo nombre base y la extensión propia de la herramienta. Al revisar una vista, actualiza su imagen y su explicación. Las versiones anteriores quedarán en los commits que incluyan esos archivos.
+La relación entre verificación del correo, aprobación profesional y autorización de cuidado se mantiene explícita para evitar tratarlas como una única condición de acceso.
 
 ## 5 Respaldo en los requisitos
 
-Indica los UR y FR que respaldan las decisiones del modelo. Añade los NFR que condicionen un caso o su descripción. Explica la relación cuando el identificador no baste para comprenderla.
-
-En E1 basta con un respaldo breve del diagrama. La tabla permite ampliar la trazabilidad después. No es necesario crear un caso independiente para cada FR o NFR.
-
 | Elemento del modelo | UR y FR de referencia | NFR pertinentes | Relación con los requisitos |
 | --- | --- | --- | --- |
-| [Caso, actor o relación] | [Identificadores] | [Identificadores, si procede] | [Explica qué respaldan o condicionan.] |
+| UC-01 Registrar cuenta | UR-01; FR-001, FR-002, FR-003, FR-004, FR-005, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, FR-013, FR-188, FR-189, FR-214, FR-215 | NFR-010, NFR-003, NFR-014 | Representa el registro local, sus datos y validaciones, el alias, CAPTCHA, aceptación independiente de condiciones y privacidad, y las condiciones de idioma y accesibilidad previstas para E1. |
+| UC-02 Verificar correo | UR-01; FR-008, FR-009 | NFR-003, NFR-004, NFR-005 | La cuenta permanece pendiente hasta que se verifica el correo. La verificación es diferente de la aprobación de un perfil y de la autorización de una relación de cuidado. |
+| UC-03 Iniciar sesión | UR-02; FR-015 | NFR-004, NFR-005, NFR-010, NFR-003, NFR-014 | Representa el acceso local mediante correo y contraseña. E1 medirá el inicio de sesión del prototipo bajo la carga definida para la comprobación. |
+| UC-04 Restablecer contraseña | UR-02; FR-016 | NFR-010, NFR-003, NFR-014 | Representa el restablecimiento mediante un enlace enviado al correo de la cuenta. La función forma parte del alcance de requisitos de E1, aunque no se implementa en el prototipo. |
+| UC-05 Actualizar perfil | UR-03; FR-019 | NFR-010, NFR-003, NFR-014 | FR-019 permite modificar datos personales y preferencias, pero excluye alias y correo. La función debe respetar las condiciones de accesibilidad e idioma. |
+| UC-06 Eliminar cuenta propia | UR-03; FR-020, FR-211 | NFR-010 | La eliminación propia exige comprobar la identidad mediante la contraseña actual. El contenido publicado por un cuidador se conserva cuando corresponde. La función forma parte de los requisitos de E1, pero no del prototipo. |
+| UC-07 Gestionar cuentas | UR-13; FR-181, FR-182, FR-183, FR-184, FR-185, FR-211, FR-212 | NFR-010 | Representa el listado y las acciones de gestión de cuentas previstas para el coordinador, incluida la auditoría. La eliminación de una cuenta de cuidador debe conservar su contenido según los requisitos. |
+| UC-08 Aprobar perfil profesional | UR-01, UR-13; FR-014, FR-191, FR-213 | NFR-010 | La solicitud de perfil de nutricionista incluye documentación profesional en PDF y sus comprobaciones. Las funciones profesionales permanecen limitadas mientras la documentación no sea aprobada. |
+| UC-09 Gestionar relación de cuidado | UR-01; FR-193, FR-194 | NFR-010 | La relación de cuidado requiere autorización expresa del paciente. La autorización no se considera equivalente a la verificación del correo ni a la aprobación de un perfil profesional. |
+| UC-10 Consultar ayuda | UR-12; FR-172, FR-173 (parte correspondiente a E1), FR-174, FR-175, FR-176, FR-177 | NFR-010, NFR-003, NFR-014 | Representa la ayuda sobre las funciones seleccionadas, con navegación entre temas, elementos visuales y posibilidad de pausar, reanudar y cerrar. |
+| UC-11 Realizar bienvenida | UR-12; FR-207 | NFR-010, NFR-003, NFR-014 | Representa el recorrido de bienvenida del primer acceso. Puede omitirse y es independiente de la ayuda contextual. |
 
-Consulta el [catálogo canónico](../requisitos/catalogo-requisitos.md) y la [SRS](../requisitos/srs.md). Si falta una condición, indica que está pendiente de aclaración. No la presentes como un requisito confirmado.
+Los NFR se incorporan como condiciones del modelo cuando afectan al comportamiento o a las características de las funciones. No se crea un caso de uso independiente para cada NFR.
+
+NFR-004 define la carga de referencia de 100 usuarios concurrentes y 10 operaciones por segundo durante 30 minutos. NFR-005 establece un máximo de 2 segundos para el 95 % de los inicios de sesión y de las consultas definidas para la prueba. En E1 la comprobación se limita al inicio de sesión.
+
+La relación de NFR-005 con FR concretos sigue pendiente en el catálogo. E1 comprobará su aplicación al acceso local sin modificar la trazabilidad canónica.
+
+El catálogo no contiene un NFR específico de seguridad de credenciales. Esta cuestión queda pendiente de aclaración y no se presenta como requisito confirmado.
 
 ## 6 Descripciones de los casos de uso
 
-**Desarrollo posterior.** Este apartado queda pendiente en E1. Se completará cuando se trabajen las descripciones de los casos de uso. La existencia de este apartado no exige describirlos ahora.
+**Desarrollo posterior.** Este apartado queda pendiente en E1. El plan de iteración establece que E1 construye el modelo y precisa los escenarios necesarios, pero no exige descripciones detalladas de los casos de uso.
 
-Repite el esquema siguiente para cada caso que se vaya a describir. Usa el identificador y el nombre del apartado 3. El nivel de detalle dependerá del trabajo previsto para ese caso.
-
-### 6.1 Descripción de un caso
-
-**Identificador y nombre:** [Indica el caso.]
-
-**Estado de la descripción:** [Indica si es un resumen, una descripción esencial o una descripción detallada.]
-
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
-
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
-
-**Condiciones previas:** [Indica qué debe cumplirse antes de iniciar el caso.]
-
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
-
-**Escenario principal:** [Describe la secuencia entre los participantes y el sistema.]
-
-**Alternativas y errores:** [Describe las variaciones conocidas y su resultado.]
-
-**Resultado:** [Indica qué queda establecido al terminar y qué ocurre si el objetivo no se alcanza.]
-
-**Reglas y NFR pertinentes:** [Remite a los requisitos que condicionan el comportamiento.]
-
-**Preguntas abiertas:** [Registra lo que aún falta por confirmar.]
-
-Describe el comportamiento que se necesita. Las decisiones sobre componentes, clases o tecnologías pertenecen al trabajo de arquitectura y diseño.
+Las descripciones se completarán en iteraciones posteriores, conservando los identificadores definidos en el apartado 3.
 
 ## 7 Continuidad entre iteraciones
 
-En E1, indica que esta es la primera vista del modelo. A partir de la siguiente iteración, resume qué elementos se incorporan y cuáles se revisan, conservan o retiran.
+E1 constituye la primera vista del modelo de casos de uso. La vista inicial cubre acceso local, gestión básica de cuentas, perfiles y relaciones de cuidado seleccionadas, ayuda y bienvenida.
 
-[Explica la situación del modelo y su continuidad.]
+En las siguientes iteraciones se incorporarán nuevas vistas para las funciones que quedan pendientes, entre ellas Google, salud, recetas, foro, publicaciones, valoraciones, comentarios y moderación. También podrán ampliarse las vistas actuales cuando se trabajen funciones avanzadas de ayuda, suspensión, expulsión y ciclo de vida de las relaciones de cuidado.
 
-Este apartado describe la evolución del modelo. No sustituye la evaluación de la iteración. Los resultados de arquitectura, las pruebas y las desviaciones del plan se registran en sus documentos correspondientes.
+Los elementos que continúen representando el mismo objetivo conservarán sus identificadores. Las revisiones de comportamiento no implicarán crear un nuevo identificador cuando el objetivo del caso de uso siga siendo el mismo.
 
-El historial completo de este archivo está en Git. Para localizar el estado de cierre de una iteración, utiliza el commit identificado al cerrar esa iteración. La [guía de esta carpeta](README.md) explica el procedimiento.
+La arquitectura y las pruebas pueden aportar evidencias que obliguen a revisar el modelo. La primera vista no se considera definitiva ni implica que los módulos de usuarios y ayuda estén completados.
+
+El historial completo de este archivo está en Git. Para localizar el estado de cierre de una iteración, se utilizará el commit identificado al cerrar esa iteración.
