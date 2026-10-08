@@ -27,13 +27,12 @@ La primera vista no implica que todas las funciones representadas estén impleme
 | Usuario | Persona que interactúa con Proyecto Simbiosis |
 | Usuario registrado | Persona que dispone de una cuenta en la plataforma |
 | Coordinador | Persona que gestiona cuentas y aprobaciones desde las funciones de administración |
-| Servicio de correo | Sistema externo que permite enviar mensajes de verificación y restablecimiento |
+
 
 Usuario registrado es una especialización de Usuario. Disponer de una cuenta no significa haber iniciado sesión.
 
 El coordinador representa un rol externo del sistema y no corresponde a una persona concreta del equipo de desarrollo.
 
-El servicio de correo es un sistema externo utilizado para las comunicaciones asociadas al acceso y a la gestión de cuentas.
 
 ## 3 Casos de uso
 
