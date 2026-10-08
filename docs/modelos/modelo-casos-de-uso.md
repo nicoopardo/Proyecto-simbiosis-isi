@@ -38,10 +38,10 @@ El coordinador representa un rol externo del sistema y no corresponde a una pers
 
 | Identificador | Nombre | Objetivo | Participantes |
 | --- | --- | --- | --- |
-| UC-01 | Registrar cuenta | Crear una cuenta local proporcionando los datos requeridos y aceptando las condiciones correspondientes | Actor principal: Usuario. Actor de apoyo: Servicio de correo |
+| UC-01 | Registrar cuenta | Crear una cuenta local proporcionando los datos requeridos y aceptando las condiciones correspondientes | Actor principal: Usuario.|
 | UC-02 | Verificar correo | Confirmar la dirección de correo de una cuenta mediante el enlace recibido | Actor principal: Usuario |
 | UC-03 | Iniciar sesión | Acceder a la plataforma mediante las credenciales de una cuenta local | Actor principal: Usuario registrado |
-| UC-04 | Restablecer contraseña | Recuperar el acceso mediante un enlace enviado al correo de la cuenta | Actor principal: Usuario registrado. Actor de apoyo: Servicio de correo |
+| UC-04 | Restablecer contraseña | Recuperar el acceso mediante un enlace enviado al correo de la cuenta | Actor principal: Usuario registrado.|
 | UC-05 | Actualizar perfil | Actualizar los datos personales y preferencias permitidos | Actor principal: Usuario registrado |
 | UC-06 | Eliminar cuenta propia | Solicitar la eliminación de la cuenta propia tras comprobar la identidad | Actor principal: Usuario registrado |
 | UC-07 | Gestionar cuentas | Consultar y gestionar las cuentas según las funciones de administración previstas | Actor principal: Coordinador |
