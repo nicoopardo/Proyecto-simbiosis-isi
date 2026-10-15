@@ -2,9 +2,9 @@
 
 | Versión | Fecha | Estado |
 | --- | --- | --- |
-| 1.6 | 11/10/2026 | Revisado |
+| 1.7 | 11/10/2026 | Borrador |
 
-**Iteración de referencia:** E1. Este documento recoge la primera vista revisada del modelo. Será el punto de partida para ampliarlo en E2.
+**Iteración de referencia:** E2. Este documento recoge la segunda vista del modelo. Será el punto de partida para ampliarlo en E2.
 
 **Plantilla base:** [Plantilla del modelo de casos de uso](plantilla-modelo-casos-de-uso.md). La plantilla se conserva sin cumplimentar. Los resultados del proyecto se incorporan a este documento.
 
@@ -117,6 +117,19 @@ UC-34 no incluye UC-35. FR-185 exige auditar las acciones de aprobación, suspen
 La vista no utiliza relaciones de extensión ni generalizaciones entre casos de uso. La bienvenida y la ayuda tienen objetivos propios y se representan por separado.
 
 El inicio de sesión no se incluye en todos los casos protegidos. La comprobación de la contraseña actual al eliminar la cuenta tampoco implica un nuevo inicio de sesión.
+
+La imagen se conserva en el repositorio con el nombre usado para esta referencia. Las revisiones de esta vista actualizarán el mismo archivo. Las nuevas vistas tendrán archivos distintos, de acuerdo con la [guía de modelos](README.md).
+
+### 4.2 Vista de acceso, cuentas y ayuda de E1
+
+**Frontera del sistema:** Proyecto Simbiosis.
+
+**Alcance:** 
+Publicación y edición de recetas propias, validación de recetas por los nutricionistas y gestión de datos de salud.
+
+![Vista de acceso, cuentas y ayuda de E1](imagenes/casos-de-uso-salud-recetas-e2.png)
+
+**Relaciones entre casos de uso.** 
 
 La imagen se conserva en el repositorio con el nombre usado para esta referencia. Las revisiones de esta vista actualizarán el mismo archivo. Las nuevas vistas tendrán archivos distintos, de acuerdo con la [guía de modelos](README.md).
 
