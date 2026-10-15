@@ -74,6 +74,9 @@ Los objetivos de esta tabla son resúmenes. Las descripciones detalladas quedan 
 | UC-14 | Consultar historial de salud | Consultar los datos de salud propios, filtrarlos por tipo y ver sus gráficas. | Principal: Paciente. |
 | UC-15 | Exportar datos de salud | Obtener los datos de salud propios en PDF o CSV. | Principal: Paciente. |
 | UC-16 | Autorizar acceso de nutricionista | Autorizar a un nutricionista concreto, identificado por su correo, para consultar los datos de salud propios. | Principal: Paciente. |
+| UC-17 | Invitar a nutricionista | Invitar a registrarse a un nutricionista cuyo correo no corresponde a ninguna cuenta. | Principal: Paciente, mediante UC-16. Apoyo: Servicio de correo electrónico, mediante UC-11. |
+| UC-18 | Revocar acceso de nutricionista | Retirar la autorización concedida a un nutricionista para que no pueda realizar nuevas consultas. | Principal: Paciente. |
+| UC-19 | Autorizar acceso de cuidador a datos de salud | Seleccionar qué datos de salud puede consultar un cuidador con relación de cuidado activa. | Principal: Paciente. |
 | UC-31 | Aprobar cuenta de cuidador o nutricionista | Aprobar una cuenta solicitada con perfil de cuidador o nutricionista, conforme a las condiciones del perfil. | Principal: Coordinador. |
 | UC-32 | Suspender cuenta de usuario activa | Suspender una cuenta de usuario que se encuentra activa. | Principal: Coordinador. |
 | UC-33 | Eliminar cuenta de usuario | Eliminar una cuenta de usuario y conservar el contenido publicado cuando corresponda a un cuidador. | Principal: Coordinador. |
