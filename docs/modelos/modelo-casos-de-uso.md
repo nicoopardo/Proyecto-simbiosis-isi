@@ -69,6 +69,11 @@ Los objetivos de esta tabla son resúmenes. Las descripciones detalladas quedan 
 | UC-09 | Consultar ayuda | Consultar las instrucciones y los temas de ayuda de las funciones seleccionadas. | Principal: Usuario. |
 | UC-10 | Recorrer bienvenida | Conocer las funciones básicas mediante el recorrido del primer acceso, con la posibilidad de omitirlo. | Principal: Usuario registrado. |
 | UC-11 | Enviar correo electrónico | Enviar el mensaje que necesita el caso de uso que lo incluye. | Apoyo: Servicio de correo electrónico. No se asigna un actor principal independiente. |
+| UC-12 | Registrar datos de salud | Introducir manualmente datos fisiológicos, resultados de laboratorio o notas de síntomas, con sus fechas, unidades y validaciones. | Principal: Paciente. |
+| UC-13 | Corregir dato de salud | Modificar un dato de salud propio introducido por error. | Principal: Paciente. |
+| UC-14 | Consultar historial de salud | Consultar los datos de salud propios, filtrarlos por tipo y ver sus gráficas. | Principal: Paciente. |
+| UC-15 | Exportar datos de salud | Obtener los datos de salud propios en PDF o CSV. | Principal: Paciente. |
+| UC-16 | Autorizar acceso de nutricionista | Autorizar a un nutricionista concreto, identificado por su correo, para consultar los datos de salud propios. | Principal: Paciente. |
 | UC-31 | Aprobar cuenta de cuidador o nutricionista | Aprobar una cuenta solicitada con perfil de cuidador o nutricionista, conforme a las condiciones del perfil. | Principal: Coordinador. |
 | UC-32 | Suspender cuenta de usuario activa | Suspender una cuenta de usuario que se encuentra activa. | Principal: Coordinador. |
 | UC-33 | Eliminar cuenta de usuario | Eliminar una cuenta de usuario y conservar el contenido publicado cuando corresponda a un cuidador. | Principal: Coordinador. |
