@@ -356,6 +356,8 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 **Preguntas abiertas:** no se requieren preguntas adicionales para el comportamiento cubierto por el acta. La ausencia de un FR específico para la consulta del detalle queda registrada en el respaldo del modelo; no se resuelve atribuyendo esa función a un requisito distinto.
 
+![Diagrama de actividad de UC-21 · Buscar recetas](imagenes/actividad-buscar-recetas-uc21.png)
+
 ## 7 Continuidad entre iteraciones
 
 E1 estableció la primera vista del modelo. Su estado revisado se conserva en el commit público `984a17f`, con los casos UC-01 a UC-07, UC-09 a UC-11 y UC-31 a UC-35.
